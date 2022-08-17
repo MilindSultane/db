@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet"   
+         href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  
+         integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"   
+         crossorigin = "anonymous">        
+  <title></title>
+</head>
+<body>
+
+  <form onsubmit="return login()" action="login" >
+  <section class="vh-100" style="background-color: #9A616D;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="file:///F:/website/images/learn.webp"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+             
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                   
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" id="email" class="form-control form-control-lg" name="eid" />
+                    <label class="form-label" for="form2Example17">Email address</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="pwd1" class="form-control form-control-lg" name= "password"/>
+                    <label class="form-label" for="form2Example27">Password</label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button onclick="return login()" class="btn btn-dark btn-lg btn-block" type="submit"><a href="Bizgurukul.html">Login</a></button>
+                  </div>
+
+                  <a class="small text-muted" href="#!">Forgot password?</a>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="Reg_Form.html"
+                      style="color: #393f81;">Register here</a></p>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+
+
+<script type="text/javascript">
+  function login()
+  {
+    var uname = document.getElementById("email")
+    var pwd = document.getElementById("pwd1")
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    
+    if(uname.value =="")
+    {
+      alert("Please Enter the Username");
+      return false;
+    }
+    else {
+      true;
+    }
+
+   if(pwd.value =="")
+    {
+      alert("Please Enter the Password");
+      return false;
+    }
+    else {
+      true;
+    }
+     if(pwd.value.length < 6 || pwd.value.length > 6)
+    {
+      alert("Password min and max length is 6.");
+      return false;
+    }
+    else {
+      true;
+    }  
+  }
+    
+</script>
+
+</body>
+</html>

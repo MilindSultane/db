@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel = "stylesheet"   
+         href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  
+         integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"   
+         crossorigin = "anonymous">         
+
+</head>
+<style type="text/css">
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+ body {  
+      color: #293462;  
+      }  
+      </style>  
+</style>
+
+<body onload='document.form1.text1.focus()'>
+
+
+<form  onsubmit="return valiate()" action="/New_Login.html" method="post" name="form1"  >
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img src="file:///F:/dbs/images/learn.webp"
+                alt="Sample photo" class="img-fluid"
+               style="height: 100% "  />
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Student registration form</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="uname" class="form-control form-control-lg" name="uname" />
+                      <label class="form-label" for="form3Example1m">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="lname" class="form-control form-control-lg" name="lname" />
+                      <label class="form-label" for="form3Example1n">Last name</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="eid" class="form-control form-control-lg" name="eid" />
+                  <label class="form-label" for="form3Example97">Email ID</label>
+                </div>
+
+                 <div class="form-outline mb-4">
+                  <input type="text" id="addr" class="form-control form-control-lg" name="eid" />
+                  <label class="form-label" for="form3Example8">Address</label>
+                </div>
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                  <h6 class="mb-0 me-4">Gender: </h6>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                      value="option2" />
+                    <label class="form-check-label" for="maleGender">Male</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                      value="option1" />
+                    <label class="form-check-label" for="femaleGender">Female</label>
+                  </div>
+
+                  
+
+                  
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <select class="select">
+                      <option value="1">State</option>
+                      <option value="2">Maharashtra</option>
+                      <option value="3">Karnatak</option>
+                      <option value="4">Andhra Pradesh</option>
+                      <option value="4">Rajasthan</option>
+                    </select>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <select class="select" >
+                      <option value="1">City</option>
+                      <option value="2">Shegaon</option>
+                      <option value="3">Akola</option>
+                      <option value="4">Khamgaon</option>
+                    </select>
+
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example9" class="form-control form-control-lg" placeholder="_ _ /_ _ /_ _ _ _" name="dob" />
+                  <label class="form-label" for="form3Example9" >DOB</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="pin" class="form-control form-control-lg" name="pin" />
+                  <label class="form-label" for="form3Example90">Pincode</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example99" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example99">Course</label>
+                </div>
+
+                
+
+                <div class="d-flex justify-content-end pt-3">
+                 
+                  <button onclick="return validate()" type="submit" class="btn btn-warning btn-lg ms-2"><a href="Bizgurukul.html">Submit form</a> </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+
+<script type="text/javascript">
+	function validate()
+	 {
+		var username = document.getElementById("uname")
+		var lastname = document.getElementById("lname")
+	  var adress = document.getElementById("addr")
+		var emailid = document.getElementById("eid")
+		var pincode = document.getElementById("pin")
+    var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+	
+	if (username.value==""){
+		alert("Name is Missing");
+		return false;
+	}
+	else{
+		true;
+
+	}
+	if (lastname.value==""){
+		alert("Last Name is Missing");
+		return false;
+	}
+	else{
+		true;
+
+	}
+
+	if (adress.value==""){
+		alert("Enter your Address");
+		return false;
+	}
+	else{
+		true;
+
+	}
+
+	if (emailid.value.indexOf('@')<=0){
+		alert("Invalid @ Position");
+		return false;
+	}
+	else{
+		true;
+	}
+
+	if (emailid.value.charAt(emailid.value.length-4||3)!='.'){
+		alert("Invalid . Position");
+		return false;
+	}
+	else{
+		true;
+	}
+	if (pincode.value==""){
+		alert("Please Enter your Pin pincode");
+		return false;
+	}
+	else{
+		true;
+
+	}
+	if (pincode.value.length < 6 || pincode.length > 6){
+		alert("Invalid Pincode");
+		return false;
+	}
+	else{
+		true;
+
+	}
+
+  if(inputText.value.match(dateformat))
+  {
+  document.form1.text1.focus();
+  //Test which seperator is used '/' or '-'
+  var opera1 = inputText.value.split('/');
+  var opera2 = inputText.value.split('-');
+  lopera1 = opera1.length;
+  lopera2 = opera2.length;
+  // Extract the string into month, date and year
+  if (lopera1>1)
+  {
+  var pdate = inputText.value.split('/');
+  }
+  else if (lopera2>1)
+  {
+  var pdate = inputText.value.split('-');
+  }
+  var dd = parseInt(pdate[0]);
+  var mm  = parseInt(pdate[1]);
+  var yy = parseInt(pdate[2]);
+  // Create list of days of a month [assume there is no leap year by default]
+  var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
+  if (mm==1 || mm>2)
+  {
+  if (dd>ListofDays[mm-1])
+  {
+  alert('Invalid date format!');
+  return false;
+  }
+  }
+  if (mm==2)
+  {
+  var lyear = false;
+  if ( (!(yy % 4) && yy % 100) || !(yy % 400)) 
+  {
+  lyear = true;
+  }
+  if ((lyear==false) && (dd>=29))
+  {
+  alert('Invalid date format!');
+  return false;
+  }
+  if ((lyear==true) && (dd>29))
+  {
+  alert('Invalid date format!');
+  return false;
+  }
+  }
+  }
+  else
+  {
+  alert("Invalid date format!");
+  document.form1.text1.focus();
+  return false;
+  }
+
+	
+}
+
+</script>
+
+</body>
+</html>
